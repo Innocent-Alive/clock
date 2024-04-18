@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Tilt+Neon&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: linear-gradient(to right, #ff9d6c, #bb4e75);
+  font-family: "Courier Prime", monospace;
+}
+/* Clock App */
+.clockApp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .circle {
+    background-color: #f3e9bd8a;
+    background: url("../assets/map.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    border: 5px solid #430a5d;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      
+  }
+  .circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.173);
+    border-radius: 50%;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); 
+  }
+  .circle .number {
+    --rotation: 0;
+    z-index: 1;
+    font-size: 1.7rem;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+    color: #eee4b1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+  }
+  .circle .number.sub {
+    font-weight: 300;
+    color: #eee4b1a9;
+  }
+  .circle .number1 {
+    --rotation: 30deg;
+  }
+  .circle .number1-1 {
+    --rotation: 36deg;
+  }
+  .circle .number1-2 {
+    --rotation: 42deg;
+  }
+  .circle .number1-3 {
+    --rotation: 48deg;
+  }
+  .circle .number1-4 {
+    --rotation: 54deg;
+  }
+  .circle .number2 {
+    --rotation: 60deg;
+  }
+  .circle .number2-1 {
+    --rotation: 66deg;
+  }
+  .circle .number2-2 {
+    --rotation: 72deg;
+  }
+  .circle .number2-3 {
+    --rotation: 78deg;
+  }
+  .circle .number2-4 {
+    --rotation: 84deg;
+  }
+  .circle .number3 {
+    --rotation: 90deg;
+  }
+  .circle .number3-1 {
+    --rotation: 96deg;
+  }
+  .circle .number3-2 {
+    --rotation: 102deg;
+  }
+  .circle .number3-3 {
+    --rotation: 108deg;
+  }
+  .circle .number3-4 {
+    --rotation: 114deg;
+  }
+  .circle .number4 {
+    --rotation: 120deg;
+  }
+  .circle .number4-1 {
+    --rotation: 126deg;
+  }
+  .circle .number4-2 {
+    --rotation: 132deg;
+  }
+  .circle .number4-3 {
+    --rotation: 138deg;
+  }
+  .circle .number4-4 {
+    --rotation: 144deg;
+  }
+  .circle .number5 {
+    --rotation: 150deg;
+  }
+  .circle .number5-1 {
+    --rotation: 156deg;
+  }
+  .circle .number5-2 {
+    --rotation: 162deg;
+  }
+  .circle .number5-3 {
+    --rotation: 168deg;
+  }
+  .circle .number5-4 {
+    --rotation: 174deg;
+  }
+  .circle .number6 {
+    --rotation: 180deg;
+  }
+  .circle .number6-1 {
+    --rotation: 186deg;
+  }
+  .circle .number6-2 {
+    --rotation: 192deg;
+  }
+  .circle .number6-3 {
+    --rotation: 198deg;
+  }
+  .circle .number6-4 {
+    --rotation: 204deg;
+  }
+  .circle .number7 {
+    --rotation: 210deg;
+  }
+  .circle .number7-1 {
+    --rotation: 216deg;
+  }
+  .circle .number7-2 {
+    --rotation: 222deg;
+  }
+  .circle .number7-3 {
+    --rotation: 228deg;
+  }
+  .circle .number7-4 {
+    --rotation: 234deg;
+  }
+  .circle .number8 {
+    --rotation: 240deg;
+  }
+  .circle .number8-1 {
+    --rotation: 246deg;
+  }
+  .circle .number8-2 {
+    --rotation: 252deg;
+  }
+  .circle .number8-3 {
+    --rotation: 258deg;
+  }
+  .circle .number8-4 {
+    --rotation: 264deg;
+  }
+  .circle .number9 {
+    --rotation: 270deg;
+  }
+  .circle .number9-1 {
+    --rotation: 276deg;
+  }
+  .circle .number9-2 {
+    --rotation: 282deg;
+  }
+  .circle .number9-3 {
+    --rotation: 288deg;
+  }
+  .circle .number9-4 {
+    --rotation: 294deg;
+  }
+  .circle .number10 {
+    --rotation: 300deg;
+  }
+  .circle .number10-1 {
+    --rotation: 306deg;
+  }
+  .circle .number10-2 {
+    --rotation: 312deg;
+  }
+  .circle .number10-3 {
+    --rotation: 318deg;
+  }
+  .circle .number10-4 {
+    --rotation: 324deg;
+  }
+  .circle .number11 {
+    --rotation: 330deg;
+  }
+  .circle .number11-1 {
+    --rotation: 336deg;
+  }
+  .circle .number11-2 {
+    --rotation: 342deg;
+  }
+  .circle .number11-3 {
+    --rotation: 348deg;
+  }
+  .circle .number11-4 {
+    --rotation: 354deg;
+  }
+  .circle .number12-1 {
+    --rotation: 6deg;
+  }
+  .circle .number12-2 {
+    --rotation: 12deg;
+  }
+  .circle .number12-3 {
+    --rotation: 18deg;
+  }
+  .circle .number12-4 {
+    --rotation: 24deg;
+  }
+  .circle .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 8px;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+  .circle::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #eee4b1;
+    border: 0.1px solid #8c6a5d;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  .circle .hand.second {
+    width: 3px;
+    height: 49%;
+    background-color: #650a07;
+    z-index: 3;
+  }
+  .circle .hand.minute {
+    width: 8px;
+    height: 47%;
+    background-color: #3d1450;
+    border: 0.1px solid #8c6a5d;
+    z-index: 2;
+  }
+  .circle .hand.hour {
+    width: 12px;
+    height: 30%;
+    background-color: #4a1e5f;
+    border: 0.1px solid #8c6a5d;
+    z-index: 1;
+  }
+  .rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Times New Roman", Times, serif;
+  }
+  .rectangle .time {
+    background-color: #3d1450;
+    border: 1px solid #eee4b1;
+    font-size: 2.5rem;
+    color: #eee4b1;
+    margin: 50px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0.5rem 0.5rem #3d1450, -0.5rem -0.5rem #3d1450;
+
+  }
+  .colon {
+    font-size: 3.6rem;
+    color: #eee4b1;
+    -webkit-text-stroke: 1px #3d1450;
+  }
+  
+  /* Responsive Design */
+  
+  @media screen and (max-width: 750px) {
+    .circle {
+      height: 400px;
+      width: 400px;
+      border-width: 4px;
+    }
+    .circle .number {
+      font-size: 1.5rem;
+    }
+    .circle .hand {
+      width: 8px;
+    }
+    .circle::after {
+      width: 18px;
+      height: 18px;
+    }
+    .circle .hand.second {
+      width: 3px;
+    }
+    .circle .hand.minute {
+      width: 8px;
+    }
+    .circle .hand.hour {
+      width: 10px;
+    }
+    
+    .rectangle .time {
+      font-size: 2.0rem;
+      margin: 45px 10px;
+      padding: 8px;
+      box-shadow: 0.5rem 0.5rem #3d1450, -0.5rem -0.5rem #3d1450;
+  
+    }
+    .colon {
+      font-size: 3.2rem;
+    }
+  }
+  @media screen and (max-width: 570px) {
+    .circle {
+      height: 350px;
+      width: 350px;
+      border-width: 3.2px;
+    }
+    .circle::after {
+      width: 16px;
+      height: 16px;
+    }
+    .circle .hand.second {
+      width: 2.8px;
+    }
+    .circle .hand.minute {
+      width: 7px;
+    }
+    .circle .hand.hour {
+      width: 8px;
+    }
+    .circle .number {
+      font-size: 0.9rem;
+    }
+    
+  }
+  @media screen and (max-width: 490px) {
+    .circle {
+      height: 300px;
+      width: 300px;
+      border-width: 2.5px;
+    }
+    .circle::after {
+      width: 15px;
+      height: 15px;
+    }
+    .circle .hand.second {
+      width: 2.5px;
+    }
+    .circle .hand.minute {
+      width: 5.5px;
+    }
+    .circle .hand.hour {
+      width: 7px;
+    }
+    .rectangle .time {
+      font-size: 1.5rem;
+      margin: 40px 10px;
+      padding: 8px;
+      box-shadow: 0.4rem 0.4rem #3d1450, -0.4rem -0.4rem #3d1450;
+  
+    }
+    .colon {
+      font-size: 3rem;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .circle {
+      height: 250px;
+      width: 250px;
+    }
+    .circle .number {
+      font-size: 0.8rem;
+    }
+    .rectangle .time {
+      font-size: 1.5rem;
+      margin: 45px 10px;
+      padding: 5px;
+      box-shadow: 0.3rem 0.3rem #3d1450, -0.3rem -0.3rem #3d1450;
+  
+    }
+    .colon {
+      font-size: 2.8rem;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .circle {
+      height: 220px;
+      width: 220px;
+    }
+    .circle::after {
+      width: 12px;
+      height: 12px;
+    }
+    .circle .hand.second {
+      width: 2px;
+    }
+    .circle .hand.minute {
+      width: 5px;
+    }
+    .circle .hand.hour {
+      width: 6px;
+    }
+    .rectangle .time {
+      font-size: 1.2rem;
+      margin: 45px 10px;
+      padding: 5px;
+      box-shadow: 0.3rem 0.3rem #3d1450, -0.3rem -0.3rem #3d1450;
+  
+    }
+    .colon {
+      font-size: 2.5rem;
+    }
+  }
